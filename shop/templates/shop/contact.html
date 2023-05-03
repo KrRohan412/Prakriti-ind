@@ -1,0 +1,158 @@
+{% extends 'shop/basic.html' %}
+{% block title %} Contact Us {% endblock %}
+{% block body %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>contact</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: sans-serif;
+        }
+        section{
+            padding: 40px 15%;
+        }
+        .contact{
+            background-color: aliceblue;
+           
+            height: 100%;
+            width: 100%;
+            min-height: 100vh;
+            display: grid;
+            grid-template-columns: repeat(2,2fr);
+            align-items: center;
+            grid-gap: 6rem;
+        }
+        .contact-image img{
+            max-width: 100%;
+            width: 40rem;
+            height: 25rem;
+            border-radius: 10px;
+            margin-top: 170px ;
+        }
+        .contact-form h1{
+            font-size: 50px;
+            margin-bottom: 20px;
+
+        }
+        span{
+            color: #f60253;
+        }
+        .contact-form p{
+            color: #700e2d;
+            letter-spacing: 1px;
+            line-height: 26px;
+            font-size: 1.8rem;
+            margin-bottom: 3.5rem;
+        }
+        .contact-form form{
+            position: relative;
+        }
+        .contact-form form input{
+            width: 100%;
+            padding: 17px;
+            border: none;
+            outline: none;
+            background: rgb(224, 231, 239);
+            color: #700e2d;
+            font-size: 1.4rem;
+            margin-bottom: 0.7rem;
+            border-radius: 10px;
+        }
+        .contact-form form .btn{
+            display: inline-block;
+            background: #f580a5;
+            font-size: 1.4rem;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            font-weight: 600;
+            border-radius: 10px;
+            width: 220px;
+            transition: ease .20s;
+            cursor: pointer;
+        }
+        .contact-form form .btn:hover{
+            border: 2px solid  #f580a5;
+            background: transparent;
+            transform: scale(1.1);
+        }
+        @media (max-width : 1570px){
+            section{
+                padding: 80px 3%;
+                transition: .2s;
+            }
+        }
+        .contact-form h1{
+            font-size: 60px;
+        }
+        .contact-form p{
+            margin-bottom: 3rem;
+        }
+        @media (max-width : 1090px){
+            .contact{
+                grid-gap: 2rem;
+                transition: .3s;
+
+            }
+        }
+        @media (max-width : 1000px){
+            .contact{
+                grid-template-columns: 1fr;
+            }
+            .contact-form{
+                order: 2;
+            }
+            .contact-image img{
+                max-width: 100%;
+                width: 100%;
+                height: auto;
+                text-align: center;
+                margin-bottom: 30px;
+            }
+        }
+
+       
+
+
+
+
+    </style>
+</head>
+<body>
+    <section class="contact" >
+        <div class="contact-form">
+            <h1>Contact <span> Us</span></h1>
+            <p>For more queries and more details contact us</p>
+            <form action="" method="post">{% csrf_token %}
+                
+                <input type="text" name="name" placeholder="Enter your name" required>
+               
+                <input type="email" name="email" placeholder="E-mail" required>
+                
+                <input type="tel" name="phone_number" placeholder="Enter your number" required>
+
+                <input type="submit" name="" value="submit" class="btn">
+            </form>
+        </div>
+        <div class="contact-image">
+            <img src="\media\shop\images\image4.jpg" alt="Error"> 
+        </div>
+    </section>
+</body>
+</html>
+
+{% block js %}
+<script>
+{% if submit %}
+alert('Your Details have been submitted.Keep on shopping ....')
+document.location="/shop";
+{% endif %}
+</script>
+{% endblock %}
+{% endblock %}

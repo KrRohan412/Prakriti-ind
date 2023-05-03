@@ -1,0 +1,110 @@
+{% extends 'shop/basic.html' %}
+
+{% block title %} About Us{% endblock %}
+{% block body %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+            font-family: sans-serif;
+            box-sizing: border-box;
+        }
+       
+        .about{
+            width: 100%;
+            padding: 78px 0px;
+            height: 100%;
+            margin-left: 45px;
+            margin-bottom: 45px;
+            margin-top: 65px;
+            background-attachment:scroll;
+        }
+        .about img{
+            height: 90%;
+            width: 60%;
+            right: 140px;
+            top: 45px;
+            left: 78px;
+            margin-right: 45px;
+            
+        }
+        .about-text{
+            width: 550px;
+            margin-left: 45px;
+            margin-bottom: 45px;
+            margin-top: 45px;
+        }
+        .main{
+           
+            width: 1130px;
+            max-width: 95%;
+            margin: 0 auto;
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+        }
+        .about-text h1{
+            color: brown;
+            font-size: 50px;
+            text-transform:capitalize ;
+            margin-bottom: 20px;
+        }
+        .about-text h5{
+            color: brown;
+            font-size: 25px;
+            text-transform: capitalize ;
+            margin-bottom: 25px;
+            letter-spacing: 2px;
+        }
+        .about-text p{
+            color: coral;
+            letter-spacing: 1px;
+            line-height: 28px;
+            font-size: 18px;
+            margin-bottom: 45px;
+           
+            /* text-align:center; */
+        }
+        button{
+            background: #f9004d;
+            color: white;
+            text-decoration: none;
+            border: 2px solid transparent;
+            font-weight: bold;
+            padding: 13px 30px;
+            border-radius: 30px;
+            transition: 1s;
+        }
+        button:hover{
+            background: transparent;
+            border: 2px solid  #f9004d;
+            cursor: pointer;
+        }
+        
+    </style>
+</head>
+<body  bgcolor=" antiquewhite">
+    <section class="about">
+        <div class="main">
+            <img src="\media\shop\images\image3.jpg" alt="error">
+        <div class="about-text">
+            <h1>About Us</h1>
+            <h5>Flower Page</h5>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis voluptatibus delectus repellat nisi suscipit officia ipsam provident sapiente ratione aut labore repudiandae, iure dolore cupiditate cumque ut tempore placeat neque, animi hic consequuntur rerum.</p>
+            <button type="button">Learn More</button>
+        </div>
+
+    </section>
+</body>
+
+
+
+{% endblock %}
